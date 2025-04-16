@@ -1,0 +1,115 @@
+\documentclass{beamer}
+
+% Pour les citations
+\usepackage{csquotes}
+
+% Pour le code
+\usepackage{minted}
+
+% Page de garde
+\title{INF136 - Fondements}
+\author{Iannick Gagnon}
+\institute{École de technologie supérieure}
+\date{Été 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% SLIDE 1
+\begin{frame}[fragile]
+
+    \frametitle{Pourquoi apprendre à programmer?}
+    \vspace{1em}
+    
+    \begin{itemize}
+        \item Automatiser ce que l'humain fait mal ou n'aime pas faire.
+        \item Résoudre des problèmes trop exigeants ou trop complexes pour le cerveau humain.
+        \item Être plus rapide et faire moins d'erreur.
+        \newline
+    \end{itemize}
+    
+    \begin{displayquote}
+    Les ordinateurs sont rapides, précis et stupides. Les humains sont lents, inexacts et brillants. Ensemble, ils sont puissants au-delà de toute imagination. — Albert Einstein
+    \end{displayquote}
+
+    \begin{block}{Remarque}
+    Les cours suivants utilisent Python : MEC423, MEC536, MEC744, MEC745 et MEC788.
+    \end{block}
+    
+\end{frame}
+
+% SLIDE 2
+\begin{frame}[fragile]
+
+    \frametitle{Terminologie}
+    \vspace{1em}
+    
+    \begin{itemize}
+        \item \textbf{Algorithme} : suite d’instructions permettant de résoudre un problème.
+        \item \textbf{Pseudo-code} : description en langage naturel d’un algorithme.
+        \item \textbf{Programme} : série d’instructions destinées à être exécutées par un ordinateur.
+        \item \textbf{Variable} : espace mémoire étiqueté contenant une valeur.
+    \end{itemize}
+    
+\end{frame}
+
+% SLIDE 3
+\begin{frame}[fragile]
+
+    \frametitle{Exemples}
+    \vspace{1em}
+    
+    Exemple de pseudo-code:
+    \vspace{0.25em}
+    \begin{minted}[fontsize=\small]{text}
+    FONCTION factorielle(n)
+        r ← 1
+        POUR i ALLANT DE 2 À n
+            r ← r × i
+        FIN POUR
+        RETOURNER r
+    FIN FONCTION
+    \end{minted}
+    \vspace{0.25em}
+    Exemple de programme informatique:
+    \vspace{0.25em}
+    \begin{minted}[fontsize=\small]{python}
+    def factorielle(n):
+        r = 1
+        for i in range(2, n + 1):
+            r *= i
+        return r
+    \end{minted}
+
+\end{frame}
+
+% SLIDE 4
+\begin{frame}[fragile]
+    
+    \frametitle{Qu’est-ce qu’une variable ?}
+    \vspace{0.5em}
+    
+    \begin{itemize}
+      \item Une \textbf{variable} est un nom qui référence un espace mémoire contenant une valeur.
+      \item On peut la visualiser comme une \textbf{boîte étiquetée}:
+      \begin{enumerate}
+        \item La boîte représente l'espace mémoire alloué à la variable.
+        \item L'étiquette est l'identifiant ou le nom de la variable.
+        \item La valeur correspond au contenu de la boîte.
+      \end{enumerate}
+      \item Sa valeur peut être changée à tout moment avec \textbf{l'opérateur d'assignation} (\verb|=|).
+    \end{itemize}
+    
+    \vspace{0.25em}
+
+    \begin{block}{Exemple}
+    \begin{minted}[fontsize=\small]{python}
+    x = 123    # Créer et initialiser la variable x
+    x = 456    # Remplacer la valeur contenue dans x
+    \end{minted}
+    \end{block}
+
+\end{frame}
+
+\end{document}
